@@ -6,162 +6,173 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 
 public class convertendoDeOutasMoedasParaReais  {
-	
+		
 	
 	public static void main(String[] args) {
+			
+			convertendoDeOutasMoedasParaReais.converte();
+			
+		}
 	
+	public static void converte() {
+		
+		
+
 		convertendoDeDolarParaReais converterDeDolarParaReais = new convertendoDeDolarParaReais();
 		convertendoDeEuroParaReais converterDeEuroParaReais = new convertendoDeEuroParaReais();
 		convertendoDeLibrasEsterlinasParaReais converterDeLibrasEstrelinasParaReais = new convertendoDeLibrasEsterlinasParaReais();
 		convertendoDePesoArgentinoParaReais converterDePesoArgentinoParaReais = new convertendoDePesoArgentinoParaReais();
 		convertendoDePesoChilenopParaReais converterDePesoChilenoParaReais = new convertendoDePesoChilenopParaReais();
 		
-	String opcoes = JOptionPane.showInputDialog(null,"escolhar qual conversor você utilizara", "menu", JOptionPane.PLAIN_MESSAGE, null, new Object[]{"Conversor de moedas", "conversor unidades de comprimento"}, "escolha").toString();
-	
-	String valor = opcoes;
-	switch (valor) {
-	case "Conversor de moedas":
+
+		String opcoes = JOptionPane.showInputDialog(null,"escolhar qual conversor você utilizara", "menu", JOptionPane.PLAIN_MESSAGE, null, new Object[]{"Conversor de moedas", "conversor unidades de comprimento"}, "escolha").toString();
 		
-		String tipoDeConversao = JOptionPane.showInputDialog(null,"Qual tipo de conversão será", "Moedas", JOptionPane.PLAIN_MESSAGE, null, new Object[]{"Reais para dólar", "Reais para euro","Reais para libras esterlinas", "Reais para peso argentino", "Reais para peso chileno","Dólar para reais", "Euro para reais","Libras esterlinas para reias", "Peso argentino para reais", "Peso chileno para reais"}, "escolha").toString();
-		
-		switch(tipoDeConversao) {
-		case "Dólar para reais":
-			 String digitarValor = JOptionPane.showInputDialog("Digite um valor para ser convertido");
-			 
-			 Pattern regex =  Pattern.compile("([a-z])");
-			 
-			 Matcher alvo = regex.matcher(digitarValor);
-			 
-			 boolean encontrou  = alvo.find();
-			 
-			 if(encontrou) {
-				
-				JOptionPane.showMessageDialog(null, "Digite apenas valores númericos");				
-			 }
-			 
-			 try {
-				 
-				 double valorDigitado = Double.parseDouble(digitarValor);
-				 
-				 converterDeDolarParaReais.dolarParaReais(valorDigitado);
-			 }
-			 catch (NumberFormatException ex) {
-				
-			} 
-		}
-		
-		switch(tipoDeConversao) {
-		case "Euro para reais":
+		String valor = opcoes;
+		switch (valor) {
+		case "Conversor de moedas":
 			
-			String digitarValor = JOptionPane.showInputDialog("Digite um valor para ser convertido");
+			String tipoDeConversao = JOptionPane.showInputDialog(null,"Qual tipo de conversão será", "Moedas", JOptionPane.PLAIN_MESSAGE, null, new Object[]{"Reais para dólar", "Reais para euro","Reais para libras esterlinas", "Reais para peso argentino", "Reais para peso chileno","Dólar para reais", "Euro para reais","Libras esterlinas para reias", "Peso argentino para reais", "Peso chileno para reais"}, "escolha").toString();
 			
-			 Pattern regex =  Pattern.compile("([a-z])");
-			 
-			 Matcher alvo = regex.matcher(digitarValor);
-			 
-			 boolean encontrou  = alvo.find();
-			 
-			 if(encontrou) {
-				
-				JOptionPane.showMessageDialog(null, "Digite apenas valores númericos");
-				
-			 }
-			 
-			 try {
+			switch(tipoDeConversao) {
+			case "Dólar para reais":
+				 String digitarValor = JOptionPane.showInputDialog("Digite um valor para ser convertido");
 				 
-				 double valorDigitado = Double.parseDouble(digitarValor);
+				 Pattern regex =  Pattern.compile("([a-z])");
 				 
-				 converterDeEuroParaReais.EuroParaReais(valorDigitado);
-			 }
-			 catch (NumberFormatException ex) {
-				
-			}
-		}
-		
-		switch(tipoDeConversao) {
-		case "Libras esterlinas para reias":
-			
-			String digitarValor = JOptionPane.showInputDialog("Digite um valor para ser convertido");
-			
-			 Pattern regex =  Pattern.compile("([a-z])");
-			 
-			 Matcher alvo = regex.matcher(digitarValor);
-			 
-			 boolean encontrou  = alvo.find();
-			 
-			 if(encontrou) {
-				
-				JOptionPane.showMessageDialog(null, "Digite apenas valores númericos");
-				
-			 }
-			 
-			 try {
-				 double valorDigitado = Double.parseDouble(digitarValor);
+				 Matcher alvo = regex.matcher(digitarValor);
 				 
-				 converterDeLibrasEstrelinasParaReais.librasEstrelinasParaReais(valorDigitado);
-			 }
-			 catch (NumberFormatException ex) {
-				
+				 boolean encontrou  = alvo.find();
+				 
+				 if(encontrou) {
+					
+					JOptionPane.showMessageDialog(null, "Digite apenas valores númericos");				
+				 }
+				 
+				 try {
+					 
+					 double valorDigitado = Double.parseDouble(digitarValor);
+					 
+					 converterDeDolarParaReais.dolarParaReais(valorDigitado);
+				 }
+				 catch (NumberFormatException ex) {
+					
+				} 
 			}
 			
-		}
-		
-		switch(tipoDeConversao) {
-		case "Peso argentino para reais":
-			
-			String digitarValor = JOptionPane.showInputDialog("Digite um valor para ser convertido");
-			
-			 Pattern regex =  Pattern.compile("([a-z])");
-			 
-			 Matcher alvo = regex.matcher(digitarValor);
-			 
-			 boolean encontrou  = alvo.find();
-			 
-			 if(encontrou) {
+			switch(tipoDeConversao) {
+			case "Euro para reais":
 				
-				JOptionPane.showMessageDialog(null, "Digite apenas valores númericos");
+				String digitarValor = JOptionPane.showInputDialog("Digite um valor para ser convertido");
 				
-			 }
-			 
-			 try {
+				 Pattern regex =  Pattern.compile("([a-z])");
 				 
-				 double valorDigitado = Double.parseDouble(digitarValor);
+				 Matcher alvo = regex.matcher(digitarValor);
 				 
-				 converterDePesoArgentinoParaReais.pesoArgentinoParaReais(valorDigitado);
-			 }
-			 catch (NumberFormatException ex) {
+				 boolean encontrou  = alvo.find();
+				 
+				 if(encontrou) {
+					
+					JOptionPane.showMessageDialog(null, "Digite apenas valores númericos");
+					
+				 }
+				 
+				 try {
+					 
+					 double valorDigitado = Double.parseDouble(digitarValor);
+					 
+					 converterDeEuroParaReais.EuroParaReais(valorDigitado);
+				 }
+				 catch (NumberFormatException ex) {
+					
+				}
+			}
+			
+			switch(tipoDeConversao) {
+			case "Libras esterlinas para reias":
+				
+				String digitarValor = JOptionPane.showInputDialog("Digite um valor para ser convertido");
+				
+				 Pattern regex =  Pattern.compile("([a-z])");
+				 
+				 Matcher alvo = regex.matcher(digitarValor);
+				 
+				 boolean encontrou  = alvo.find();
+				 
+				 if(encontrou) {
+					
+					JOptionPane.showMessageDialog(null, "Digite apenas valores númericos");
+					
+				 }
+				 
+				 try {
+					 double valorDigitado = Double.parseDouble(digitarValor);
+					 
+					 converterDeLibrasEstrelinasParaReais.librasEstrelinasParaReais(valorDigitado);
+				 }
+				 catch (NumberFormatException ex) {
+					
+				}
 				
 			}
 			
-		}
-		
-		switch(tipoDeConversao) {
-		case "Peso chileno para reais":
-			
-			String digitarValor = JOptionPane.showInputDialog("Digite um valor para ser convertido");
-			
-			 Pattern regex =  Pattern.compile("([a-z])");
-			 
-			 Matcher alvo = regex.matcher(digitarValor);
-			 
-			 boolean encontrou  = alvo.find();
-			 
-			 if(encontrou) {
+			switch(tipoDeConversao) {
+			case "Peso argentino para reais":
 				
-				JOptionPane.showMessageDialog(null, "Digite apenas valores númericos");
-			 }
-			 
-			 try {
+				String digitarValor = JOptionPane.showInputDialog("Digite um valor para ser convertido");
+				
+				 Pattern regex =  Pattern.compile("([a-z])");
 				 
-				 double valorDigitado = Double.parseDouble(digitarValor);
+				 Matcher alvo = regex.matcher(digitarValor);
 				 
-				 converterDePesoChilenoParaReais.pesoChilenoParaReais(valorDigitado);
-			 }
-			 catch (NumberFormatException ex) {
+				 boolean encontrou  = alvo.find();
+				 
+				 if(encontrou) {
+					
+					JOptionPane.showMessageDialog(null, "Digite apenas valores númericos");
+					
+				 }
+				 
+				 try {
+					 
+					 double valorDigitado = Double.parseDouble(digitarValor);
+					 
+					 converterDePesoArgentinoParaReais.pesoArgentinoParaReais(valorDigitado);
+				 }
+				 catch (NumberFormatException ex) {
+					
+				}
 				
 			}
-		}
-		
-		}
+			
+			switch(tipoDeConversao) {
+			case "Peso chileno para reais":
+				
+				String digitarValor = JOptionPane.showInputDialog("Digite um valor para ser convertido");
+				
+				 Pattern regex =  Pattern.compile("([a-z])");
+				 
+				 Matcher alvo = regex.matcher(digitarValor);
+				 
+				 boolean encontrou  = alvo.find();
+				 
+				 if(encontrou) {
+					
+					JOptionPane.showMessageDialog(null, "Digite apenas valores númericos");
+				 }
+				 
+				 try {
+					 
+					 double valorDigitado = Double.parseDouble(digitarValor);
+					 
+					 converterDePesoChilenoParaReais.pesoChilenoParaReais(valorDigitado);
+				 }
+				 catch (NumberFormatException ex) {
+					
+				}
+			}
+			
+			}
 	}
-}
+	
+	}
+
