@@ -1,0 +1,3 @@
+Como vai ...
+
+O propósito do projeto é desenvolver um conversor de moedas e de unidades de comprimento.
