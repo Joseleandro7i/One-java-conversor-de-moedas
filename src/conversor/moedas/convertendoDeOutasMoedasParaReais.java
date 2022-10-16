@@ -2,10 +2,9 @@ package conversor.moedas;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import javax.swing.JOptionPane;
 
-public class convertendoDeOutasMoedasParaReais  {
+public class convertendoDeOutasMoedasParaReais {
 		
 	
 	public static void main(String[] args) {
@@ -16,8 +15,6 @@ public class convertendoDeOutasMoedasParaReais  {
 	
 	public static void converte() {
 		
-		
-
 		convertendoDeDolarParaReais converterDeDolarParaReais = new convertendoDeDolarParaReais();
 		convertendoDeEuroParaReais converterDeEuroParaReais = new convertendoDeEuroParaReais();
 		convertendoDeLibrasEsterlinasParaReais converterDeLibrasEstrelinasParaReais = new convertendoDeLibrasEsterlinasParaReais();

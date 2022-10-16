@@ -10,6 +10,12 @@ public class convertendoDeReaisParaOutrasMoedas {
 	
 	public static void main(String[] args) {
 		
+		convertendoDeReaisParaOutrasMoedas.deReaisParaOutrasmoedas();
+	}
+		
+	public static void deReaisParaOutrasmoedas() {
+		
+	
 		convertendoDeReaisParaDolar convertendoParaDolar = new convertendoDeReaisParaDolar();
 		convertendoDeReaisParaEuro  convertendoParaEuro = new convertendoDeReaisParaEuro ();
 		convertendoDeReaisParaLibrasEstrelina convertendoParaLibrasEstrelinas = new convertendoDeReaisParaLibrasEstrelina();

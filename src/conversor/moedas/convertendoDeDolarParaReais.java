@@ -18,12 +18,23 @@ public class convertendoDeDolarParaReais {
 	  
 	    int continuar = JOptionPane.showConfirmDialog(null, "Deseja continuar?");
 	  
-	    System.out.println(continuar);
 	    
 	   if(continuar == 0) {
 		   JOptionPane.showMessageDialog(null, "Você será direcionado para o menu inicial");	
 	  		
 		   converterDeOutrasMoedasParaReias.converte();
+	   }
+	   
+	   if(continuar == 1) {
+		   
+		   JOptionPane.showMessageDialog(null, "Programa finalizado");
+	  		
+	   }
+	   
+	   if(continuar == 2) {
+		   
+		   JOptionPane.showMessageDialog(null, "Programa conclúdo");	
+	  		
 	   }
   
 	}

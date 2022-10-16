@@ -9,6 +9,12 @@ public class ConvertendoDeUnidadeGrandesParaPequenas {
 	
 	public static void main(String[] args) {
 		
+		ConvertendoDeUnidadeGrandesParaPequenas.unidadesGrandesParaPequenas();
+			
+	}
+	
+	public static void unidadesGrandesParaPequenas() {
+		
 		converterDeDecametroParaCentimetro convertendoDeDecametroParacentimetro = new converterDeDecametroParaCentimetro();
 		converterDeMetroParaMilimetro convertendoDeMetroParaMilimetro = new converterDeMetroParaMilimetro();
 		converterDeQuilometroParaMetro convertendoDeQuilometroParaMetro = new converterDeQuilometroParaMetro();
@@ -64,7 +70,6 @@ public class ConvertendoDeUnidadeGrandesParaPequenas {
 				 if(encontrou) {
 					
 					JOptionPane.showMessageDialog(null, "Digite apenas valores númericos");
-					System.out.print(encontrou);
 					
 				 }
 				 
