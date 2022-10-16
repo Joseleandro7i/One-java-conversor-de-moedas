@@ -27,6 +27,8 @@ public class convertendoDeReaisParaDolar {
 	   if(continuar == 1) {
 		   
 		   JOptionPane.showMessageDialog(null, "Programa finalizado");
+		   
+		   converterDeReaisParaOutasMoedas.deReaisParaOutrasmoedas();
 	  		
 	   }
 	   
